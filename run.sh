@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash
 
 echo "Bot Launcher"
@@ -20,9 +19,6 @@ else
     echo "requirements.txt not found, skipping dependency installation."
 fi
 
-=======
-#!/bin/bash
-
 echo "Bot Launcher"
 
 if [ -f "requirements.txt" ]; then
@@ -41,6 +37,4 @@ if [ -f "requirements.txt" ]; then
 else
     echo "requirements.txt not found, skipping dependency installation."
 fi
-
->>>>>>> 6dec1e80d791f1176e43ec946037c4b17ddbc34c
 echo "failed"

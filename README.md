@@ -15,25 +15,19 @@
 - **Multithread**
 
 ## **Installation Methods:** 
-Windows/Linux: use the guide below. macOS: install using the prepackaged [DMG file](../../releases).  
+Windows and Linux instructions are below. macOS users can use the convenient [DMG file](../../releases).
 
 
 
 
 
-Verify the installation of Git and Python on your system.
+Verify Git and Python setup.
 
+Download links: https://git-scm.com/install/windows
 
+https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe
 
-Download Git for Windows: https://git-scm.com/install/windows
-
-
-
-Download Python for Windows (direct): https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe
-
-
-
-Finally, launch cmd as an administrator.
+Open a Command Prompt with admin rights.
 
 
 

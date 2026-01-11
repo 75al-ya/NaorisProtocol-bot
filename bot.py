@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sys
 import os
 import time
@@ -337,7 +336,6 @@ if __name__ == "__main__":
         sys.exit(0)
     except Exception as e:
         print(f"\n\n❌ Critical error: {str(e)}")
-=======
 import sys
 import os
 import time
@@ -676,5 +674,4 @@ if __name__ == "__main__":
         sys.exit(0)
     except Exception as e:
         print(f"\n\n❌ Critical error: {str(e)}")
->>>>>>> 6dec1e80d791f1176e43ec946037c4b17ddbc34c
         sys.exit(1)
