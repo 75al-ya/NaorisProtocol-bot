@@ -19,19 +19,20 @@ For manual setup on Windows or macOS, follow the guide. macOS offers an alternat
 
 
 # Installation+Run🕸
+
+**Windows:**
 ```shell
 git clone https://github.com/75al-ya/NaorisProtocol-bot
 cd NaorisProtocol-bot
 run.bat
 ```
 
-**OR**
-
+**Linux/macOS:**
 ```shell
 git clone https://github.com/75al-ya/NaorisProtocol-bot
 cd NaorisProtocol-bot
-pip install -r requirements.txt
-python bot.py
+chmod +x run.sh
+./run.sh
 ```
 
 # Set-up⚙
