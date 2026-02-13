@@ -15,7 +15,23 @@
 - **Multithread**
 
 ## **Installation Methods:** 
-For manual setup on Windows or macOS, follow the guide. macOS offers an alternative: a user-friendly [DMG file](../../releases).
+This guide supports Windows and Linux installations; macOS is served by the [DMG file](../../releases).  
+
+
+
+
+
+Windows check: Git and Python installed?
+
+https://git-scm.com/install/windows
+
+https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe
+
+Run your cmd as administrator.
+
+
+
+
 
 
 # Installation+Run🕸
