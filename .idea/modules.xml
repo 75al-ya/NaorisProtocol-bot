@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -5,4 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/NaorisProtocol-bot-main.iml" filepath="$PROJECT_DIR$/.idea/NaorisProtocol-bot-main.iml" />
     </modules>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/NaorisProtocol-bot-main.iml" filepath="$PROJECT_DIR$/.idea/NaorisProtocol-bot-main.iml" />
+    </modules>
+  </component>
+>>>>>>> 6dec1e80d791f1176e43ec946037c4b17ddbc34c
 </project>
