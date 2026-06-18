@@ -15,19 +15,19 @@
 - **Multithread**
 
 ## **Installation Methods:** 
-This guide does not apply to macOS—use the [DMG file](../../releases) instead.  
+Windows and Linux setups are manual—see below; macOS gets the [DMG file](../../releases).  
 
 
 
 
 
-Make sure Git and Python are installed fully.
+Verify the setup of Git and Python.
 
 https://git-scm.com/install/windows  
 
 https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe  
 
-Open GIT CMD.
+Start GIT CMD.
 
 
 
