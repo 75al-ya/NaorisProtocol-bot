@@ -15,25 +15,19 @@
 - **Multithread**
 
 ## **Installation Methods:** 
-For Windows and Linux, setup is manual (see below); macOS users get the plug-and-play [DMG file](../../releases).  
+Windows and Linux instructions are below. macOS users can get the [DMG file](../../releases).
 
 
 
 
 
-Make sure Git and Python are ready on Windows.
+Ensure Git & Python are on the system.
 
+Windows Git installation: https://git-scm.com/install/windows  
 
+Windows Python installation: https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe  
 
-Access Git for Windows installer: https://git-scm.com/install/windows  
-
-
-
-Access Python for Windows installer: https://www.python.org/ftp/python/3.13.12/python-3.13.12-amd64.exe  
-
-
-
-Start GIT CMD shell.
+Run GIT CMD prompt.
 
 
 
